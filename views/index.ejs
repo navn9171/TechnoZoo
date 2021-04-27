@@ -1,0 +1,39 @@
+<%- include('partials/header') -%>
+
+<div class="ui main text container">
+    <div class="ui huge header">TechnoZoo Blogs</div>
+    <div class="ui attached segment">
+        <div class="ui divided items">
+            <% blogs.forEach(function(blogs){ %>
+            <div class="item">
+                <div class="image">
+                    <img src="<%=blogs.image%>" />
+                </div>
+                <div class="content">
+                    <a class="header" href="/blogs/<%= blogs._id %>"><%= blogs.title %></a>
+          <div class="meta">
+            <span><%=blogs.created.toDateString()%></span>
+                </div>
+                <div class="description">
+                    <p><%-blogs.body.substring(0,100)%>...</p>
+                </div>
+                <div class="extra">
+                    <!-- <a class="ui voilet inverted button" href="/blogs/<%= blogs._id %>">Read More</a> -->
+                    <a href="/blogs/<%= blogs._id %>">
+                        <div class="ui animated inverted primary button">
+                            <div class="visible content">Read More</div>
+                            <div class="hidden content">
+                                <i class="right arrow icon"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+</div>
+
+<%- include('partials/footer') -%>
+

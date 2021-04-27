@@ -1,0 +1,26 @@
+<%- include('partials/header') -%>
+
+<div class="container segment main ui inverted form text">
+    <div style="font-family:Georgia, 'Times New Roman', Times, serif; color: #2ecc40;" class="ui huge header">New Blog</div>
+    <form action="/blogs" method="POST" class="ui form">
+        
+        <div class="field">
+            <label style="font-size: 1em;" for="title">Title</label>
+          <input style="box-shadow: 0 1px 1px; border: 2px solid #2ecc40;" type="text" name="blogs[title]" placeholder="Title of your Blog">
+        </div>
+        
+        <div class="field">
+            <label style="font-size: 1em;" for="image">Image</label>
+          <input style="box-shadow: 0 1px 1px; border: 2px solid #2ecc40;" type="text" name="blogs[image]" placeholder="Image Url">
+        </div>
+        
+        <div class="field">
+            <label style="font-size: 1em;" for="body">Description</label>
+            <textarea style="box-shadow: 0 1px 1px; border: 2px solid #2ecc40;" name="blogs[body]" placeholder="Your Blog Post Goes here..." required></textarea>
+           
+          </div>
+        <button class="ui green big inverted button" type="submit">Submit</button>
+      </form>
+</div>
+
+<%- include('partials/footer') -%>

@@ -1,0 +1,26 @@
+<%- include('partials/header') -%>
+
+<div class="container segment main ui inverted form text">
+    <div style="font-family:Georgia, 'Times New Roman', Times, serif; color: #ffe21f;" class="ui huge header">Edit <%= blogs.title %></div>
+    <form action="/blogs/<%= blogs._id %>?_method=PUT" method="POST" class="ui form">
+        
+        <div class="field">
+            <label style="font-size: 1em;" for="title">Title</label>
+          <input style="box-shadow: 0 1px 1px; border: 2px solid #ffe21f;" type="text" name="blogs[title]" value="<%= blogs.title %>">
+        </div>
+        
+        <div class="field">
+            <label style="font-size: 1em;" for="image">Image</label>
+          <input style="box-shadow: 0 1px 1px; border: 2px solid #ffe21f;" type="text" name="blogs[image]" value="<%= blogs.image %>">
+        </div>
+        
+        <div class="field">
+            <label style="font-size: 1em;" for="body">Description</label>
+            <textarea style="box-shadow: 0 1px 1px; border: 2px solid #ffe21f;" name="blogs[body]" ><%= blogs.body %></textarea>
+           
+          </div>
+        <button class="ui yellow big inverted button" type="submit">Update</button>
+      </form>
+</div>
+
+<%- include('partials/footer') -%>

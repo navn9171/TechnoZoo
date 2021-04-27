@@ -1,0 +1,26 @@
+i.icon{
+    font-size: 3em;
+}
+.container.main{
+    margin-top: 7.0em;
+    border-radius: 2%;
+    box-shadow: 0px 2px 5px black;
+}
+
+body, html {
+    height: 91%;
+}
+
+#delete{
+    display: inline;
+}
+
+.ui.huge.header{
+    padding-left: 2%;
+    padding-top: 2%;
+    color: #2185d0;
+}
+
+
+ 
+
